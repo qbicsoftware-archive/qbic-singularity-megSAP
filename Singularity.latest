@@ -13,7 +13,7 @@ From: ubuntu
 git clone --recursive https://github.com/apeltzer/megSAP.git
 cd megSAP/data/
 chmod 755 download_*.sh
-#/bin/bash download_tools.sh
+/bin/bash download_tools.sh
 
 #Symlink our data to the right folder
 #This ensures that we can access the data path from inside the container, without having to download & bundle the datasets all the time (31GB is a lot)
@@ -23,11 +23,11 @@ ln -s /lustre_cfc/qbic/megSAP-data/data /megSAP/
 #We're not downloading this into the container
 
 #/bin/bash download_GRCh37.sh
-#/bin/bashsh download_dbs.sh
+#/bin/bash download_dbs.sh
 
 %files
 build.sh
 
 %labels
 Maintainer	alexander.peltzer@uni-tuebingen.de
-Version	20171010
+Version	20171118
